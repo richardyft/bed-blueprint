@@ -6,6 +6,10 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/features", plugin = { "pretty" })
+@CucumberOptions(
+		features = "src/test/resources/features",
+		monochrome = true,
+		plugin = {"html:target/report", "pretty"}
+		)
 public class RunCucumberTest {
 }
